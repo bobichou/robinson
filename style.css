@@ -5,38 +5,151 @@ html {
     scroll-behavior : smooth ; 
 }
 
+*{
+    margin : 0;
+    padding: 0;
+    text-decoration: none; 
+    list-style : none ; 
+}
+
+body {
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    height: 20vh; 
+    width: 20vw;
+    background: url(media/istockphoto-1429897439-640_adpp_is.mp4) ; 
+    background-size: cover ; 
+}
 
 /* NAVBAR */
+/* padding sont des marges intérieures et margin des marges extérieures  */
 
+.navbar{
+    position : absolute ;
+    padding: 50px ;
+    display: flex ;
+    justify-content: space-between ;
+    width: 100% ;
+    align-items: center ;
+    box-sizing: border-box; 
+    z-index : 1 ; 
+}
 
-nav{
-    overflow : clip ;
-    background-color : #dad8d2 ; 
-    position : sticky ; 
-    height: 150px ;
-    width : 100% ; 
-    opacity : 0.8 ; 
+.navbar a{
+    color: rgb(207, 30, 113);
+    font-size : 1.2em;
+}
+
+.navbar .logo {
+    color: rgb(207, 30, 113);
+    font-size: 2em;
+    font-weight: bold;
+    /* position: absolute;  */
 }
 
 
-#findAHome{
-    float : right ; 
 
+/* permet d'aligner nos éléments  */
+.navbar .nav-links ul  {
+    display: flex; 
+}
+
+
+
+/* permet d'aligner nos éléments  */
+.navbar .nav-links ul li {
+    margin: 0 35px;
+    display: flex; 
+    align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+    .nav-links {
+    display: none;
+    }
+}
+
+.navbar .nav-links ul li.active a {
+    color :white ;
+    font-weight: 600; 
+}
+
+
+.navbar .menu-hamburger{
+    display: none;
+    width : 40px; 
+    position: absolute; 
+    top: 50px; 
+    right: 50px;
+    width : 40px;
 }
 
 
 
 
-#button-menu{
-    float : right ; 
-    font-size : 1.1em ; 
-    color : pink ; 
+@media screen and (max-width:900px) {
+    /* .navbar {
+        padding: 0;
+    } */
+
+    .navbar .menu-hamburger {
+        display: block;
+        /* align-items : center ; */
+    }
+    
+
+    .navbar .logo {
+        color: rgb(207, 30, 113);
+        font-size: 2em;
+        font-weight: bold;
+        /* position: absolute;  */
+    }
+
+
+    .nav-links ul  {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .nav-links {
+        top: 0;
+        left: 0;
+        position: absolute ;
+        background-color: rgba(red, green, blue, alpha) ;
+        backdrop-filter: blur(15px);
+        width:100% ;
+        height: 100vh ;
+        display: flex; 
+        justify-content: center ; 
+        align-items: center;
+        margin-left:-100% ; 
+        transition: all 0.5s ease;
+
+
+    }
+
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+
+    .nav-links ul{
+        display : flex ;  
+        flex-direction : column ; 
+        align-items : center ; 
+    }
+
+    .navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
 
 }
 
 
 /* BACKGROUND */
-
 
 #video-Maison {
         height: 100vh;
@@ -48,8 +161,7 @@ nav{
         top: 0;
         bottom: 0;
         z-index: -1;
-        }
-
+        } 
 
 
 .img-fluid-logo {

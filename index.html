@@ -7,8 +7,8 @@
 
     <!--meta -->
     <meta charset ="UTF 8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 
     <!-- favicon -->
     <link rel="shortcut icon" href="media/faviconRobinson.png" />
@@ -16,53 +16,60 @@
 
 </head>
 
-    <header>
-    <nav>
-        <ul>
-        <li> <a href="#FindAHome"> Find A Home</a> </li>
-        </ul>
-        <div id="button-menu">
-        <button> Menu </button>
+<body> 
+
+    <nav class="navbar">
+        <a href="#" class="logo">ROBINSON</a>
+        <div class="nav-links">
+            <ul>
+                <li class="active"><a href="#">Find a Home</a></li>
+                <li><a href="#">Fonder une équipe</a></li>
+                <li><a href="#">Le cadre légal</a></li>
+            </ul>
         </div>
+        <img src="media/home.png " alt="menu-hamburger" class="menu-hamburger">
     </nav>
+    <header>
     </header>
 
     <!-- Headband Video/Image -->
 
     <section class="headband d-flex">
+        <video id="video-Maison" autoplay loop muted>
+            <source src="media/istockphoto-1429897439-640_adpp_is.mp4" type="video/mp4"> 
+        </video>       
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center headbandContent">
 
-
-    <video id="video-Maison" autoplay loop muted>
-    <source src="media/istockphoto-1429897439-640_adpp_is.mp4" type="video/mp4"> 
-    <img class="img-fluid logo" src="media/logoRobinson.png" alt="Logo Robinson" />
-    </video>
-
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 text-center headbandContent">
-                    <!-- logo -->
-                    <img class="img-fluid-logo" src="media/logoRobinson.png" alt="Logo Robinson" />
-                    <!-- Title -->
-                    <h1 class="slogan">
-                        <span class="first">L'exode convivial</span>
-                        <span class="second">Achetez à plusieurs</span>
-                        <span class="third">Participez à la formation des jeunes dans la rénovation du bâtiment</span>
-                    </h1>
+                            <!-- <img class="img-fluid-logo" src="media/logoRobinson.png" alt="Logo Robinson" />
+                            <h1 class="slogan">
+                                <span class="first">L'exode convivial</span>
+                                <span class="second">Achetez à plusieurs</span>
+                                <span class="third">Participez à la formation des jeunes dans la rénovation du bâtiment</span>
+                            </h1> -->
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+    </section>      
 
-    </section>
-        
 
 </head>
 
 
+</body>
 
 
 
+
+<script>
+    const menuHamburger = document.querySelector(".menu-hamburger")
+    const navLinks = document.querySelector(".nav-links")
+
+    menuHamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    })
+</script>
 
 
 </html>
