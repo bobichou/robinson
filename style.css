@@ -208,3 +208,106 @@ header {
 }
 
 
+#Cartes {
+    display : flex ;
+    flex-wrap : wrap ; 
+    justify-content : space-between ; 
+    padding : 10px 10%;
+
+}
+
+
+.main-content{
+    padding: 3vw 5vw 5vw ; 
+}
+h1 {
+    font-family: Playfair Display, serif ; 
+    font-size: clamp(25px, 7vw, 70px);
+    font-weight : 200;
+}
+h1 + span {
+    font-size : clamp(14px, 2vw, 20px)
+}
+
+.slideshow-container {
+    margin-top: 4 vw;
+    overflow: hidden;
+    min-height: 60vmin;
+    cursor: grab;
+    position: relative;
+}
+
+/* le active sous entendu quand je clique dessus */
+
+.slideshow-container:active {
+    cursor : grabbing ;
+}
+.slideshow {
+    position : absolute ; 
+    height: 100% ;
+    display : flex ; 
+    pointer-events : none ; 
+}
+
+.slide {
+    flex-shrink : 0;
+    height:100%;
+    width: 80vmin;
+    /* le vmin prend la vmin entre la largeur et la hauteur du site et permet de ne pas faire grossir l'écrito uand j'augmente à fond la largeur mais de la diminuer si je diminue à fond la fenêtre */
+    color : #fff;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* à tous les slides sauf le premier de la fraterie */
+
+.slide:not(:nth-child(1)){
+    margin-left : 20px;
+}
+
+
+.overlay {
+    position : absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.25);
+}
+
+.slide h2{
+    position: absolute;
+    top: clamp(10px,2vw, 20px);
+    left: clamp(10px, 2vw, 20px);
+    font-size: clamp(20px, 3vw, 20px);
+    font-weight: 300; 
+
+
+}
+
+.slide a{
+    position: absolute;
+    bottom: clamp(10px,2vw, 20px);
+    right: clamp(10px, 2vw, 20px);
+    font-size: clamp(16px, 3vw, 20px);
+    font-weight: 300; 
+    color: #fff;
+    pointer-events: auto;
+}
+
+
+.s1 {
+    background-image : url(media/grange.png);
+}
+
+.s2 {
+    background-image : url(media/grange.png);
+}
+
+.s3 {
+    background-image : url(media/grange.png);
+}
+.s4 {
+    background-image : url(media/grange.png);
+}
