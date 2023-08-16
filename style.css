@@ -195,3 +195,16 @@ header {
     text-align: center;
 }
 
+
+
+
+
+
+/* Partie style relative à l'index */
+
+#maisonMain {
+    background-color : pink ; 
+    padding : 10px 0px 100px 0px;
+}
+
+
