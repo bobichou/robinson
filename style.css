@@ -1,3 +1,8 @@
+
+/* LA BASE */
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Overpass');
 
@@ -12,6 +17,12 @@ html {
     list-style : none ; 
 }
 
+
+
+/* BODY TSAVAA */
+
+
+
 body {
     font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -23,8 +34,12 @@ header {
     background-size: cover ; 
 }
 
+
+
 /* NAVBAR */
-/* padding sont des marges intérieures et margin des marges extérieures  */
+/* NB : padding sont des marges intérieures et margin des marges extérieures  */
+
+
 
 .navbar{
     position : absolute ;
@@ -50,13 +65,10 @@ header {
 }
 
 
-
 /* permet d'aligner nos éléments  */
-.navbar .nav-links ul  {
+.navbar .nav-links ul {
     display: flex; 
 }
-
-
 
 /* permet d'aligner nos éléments  */
 .navbar .nav-links ul li {
@@ -76,7 +88,6 @@ header {
     font-weight: 600; 
 }
 
-
 .navbar .menu-hamburger{
     display: none;
     width : 40px; 
@@ -85,8 +96,6 @@ header {
     right: 50px;
     width : 40px;
 }
-
-
 
 
 @media screen and (max-width:900px) {
@@ -145,11 +154,10 @@ header {
         margin: 25px 0;
         font-size: 1.2em;
     }
-
 }
 
 
-/* BACKGROUND */
+/* BACKGROUND DE INDEX.HTML */
 
 #video-Maison {
         height: 100vh;
@@ -196,52 +204,48 @@ header {
 }
 
 
+/* BACKGROUND MAISON.HTML CAROUSEL RESPONSIVE TUTO DE L'ECOLE DU WEB  */
 
-
-
-
-/* Partie style relative à l'index */
-
-#maisonMain {
+#maisonMain{
     background-color : pink ; 
     padding : 10px 0px 100px 0px;
 }
 
 
-#Cartes {
-    display : flex ;
-    flex-wrap : wrap ; 
-    justify-content : space-between ; 
-    padding : 10px 10%;
-
-}
 
 
 .main-content{
     padding: 3vw 5vw 5vw ; 
 }
-h1 {
-    font-family: Playfair Display, serif ; 
+
+
+h1{
+    /* font-family: Playfair Display, serif ;  */
     font-size: clamp(25px, 7vw, 70px);
     font-weight : 200;
 }
+
+
 h1 + span {
     font-size : clamp(14px, 2vw, 20px)
 }
 
+
 .slideshow-container {
-    margin-top: 4 vw;
-    overflow: hidden;
-    min-height: 60vmin;
+    margin-top: 4vw ;
+    overflow: hidden ;
+    min-height: 60vmin ;
     cursor: grab;
     position: relative;
 }
 
-/* le active sous entendu quand je clique dessus */
 
 .slideshow-container:active {
+    /* le active sous entendu quand je clique dessus */
     cursor : grabbing ;
 }
+
+
 .slideshow {
     position : absolute ; 
     height: 100% ;
@@ -249,25 +253,26 @@ h1 + span {
     pointer-events : none ; 
 }
 
+
 .slide {
     flex-shrink : 0;
     height:100%;
     width: 80vmin;
-    /* le vmin prend la vmin entre la largeur et la hauteur du site et permet de ne pas faire grossir l'écrito uand j'augmente à fond la largeur mais de la diminuer si je diminue à fond la fenêtre */
+    /* le vmin prend la vmin entre la largeur et la hauteur du site et permet de ne pas faire grossir l'écrito quand j'augmente à fond la largeur mais de la diminuer si je diminue à fond la fenêtre */
     color : #fff;
     background-size: cover;
     background-position: center;
     position: relative;
 }
 
-/* à tous les slides sauf le premier de la fraterie */
 
 .slide:not(:nth-child(1)){
+    /* à tous les slides sauf le premier de la fraterie */
     margin-left : 20px;
 }
 
 
-.overlay {
+.overlay{
     position : absolute;
     top: 0;
     left: 0;
@@ -276,15 +281,15 @@ h1 + span {
     background: rgba(0,0,0,0.25);
 }
 
+
 .slide h2{
     position: absolute;
     top: clamp(10px,2vw, 20px);
     left: clamp(10px, 2vw, 20px);
     font-size: clamp(20px, 3vw, 20px);
     font-weight: 300; 
-
-
 }
+
 
 .slide a{
     position: absolute;
@@ -311,3 +316,129 @@ h1 + span {
 .s4 {
     background-image : url(media/grange.png);
 }
+
+
+
+
+/* slider */
+
+.slider {
+    position: absolute;
+    top : 50% ;
+    left : 50% ;
+    transform: translate(-50%,-50%); 
+    width: 400px;
+    height: 40px;
+    padding: 30px;
+    padding-left: 50px;
+    background: #fcfcfc;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content : space-between ; 
+    box-shadow: 0px 15px 40px #7E6D5766;
+}
+
+.slider p {
+    font-size: 26px;
+    font-weight: 600;
+    font-family: Open Sans;
+    padding-left: 30px;
+    color: black;
+}
+
+/* .slider input [type="range"] {
+    -webkit-appearance:none !important;
+    width: 420px;
+    height: 2px;
+    background: black;
+    border: none;
+    outline: none;
+} */
+
+.slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    width: 30px;
+    height:30px;
+    background: black;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider input[type="range"]::-webkit-slider-thumb:hover {
+    background: black;
+} 
+
+/* .range input {
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -o-transform:rotate(90deg);
+    transform:rotate(270deg);
+}; */
+
+
+button{
+    border : none;
+    color : whitesmoke;
+    width : 55%;
+    padding : 15px 10px;
+    margin: 10px 15px;
+    font-size : 1.2em;
+    font-family : 'Arial', sans-serif ;
+    border-radius: 20px ;
+}
+
+
+button{
+    font-size:1em ;
+    background-color: rgb(207, 30, 113) ; 
+}
+
+
+button:hover {
+    background-color : pink ;
+    color : whitesmoke ;
+    cursor : pointer ;
+    transition : 0,3 s ease-in-out;
+}
+
+
+
+
+/* TENTER DE TOUT BIEN ALIGNER EN RESPONSIVE DANS LA PARTIE ROSE  */
+
+/* 
+#Cartes{
+    display : flex ; 
+    flex-wrap : nowrap ; 
+    justify-content : space-between ; 
+    padding: 10px  10%;
+    box-sizing : border-box;
+}
+
+
+#Cartes {
+    width: 50%;
+    max-width: 300px;
+} */
+
+#Cartes{
+    display : flex ;
+    flex-wrap : wrap ; 
+    justify-content : space-between ; 
+    padding : 5px 5%;
+}
+
+
+.googleMaps { 
+    position: relative; 
+    overflow: hidden; 
+    padding-top: 5%; 
+  }
+
+  .homeToBuy { 
+    position: relative; 
+    overflow: hidden; 
+    padding-top: 5%; 
+  }
