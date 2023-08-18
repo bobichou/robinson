@@ -123,6 +123,7 @@ header {
         align-items: center;
     }
 
+
     .nav-links {
         top: 0;
         left: 0;
@@ -159,7 +160,7 @@ header {
 
 /* BACKGROUND DE INDEX.HTML */
 
-#video-Maison {
+#video-Maison{
         height: 100vh;
         width: 100vw;
         object-fit: cover;
@@ -173,14 +174,16 @@ header {
 
 
 .img-fluid-logo {
-    width: 300px;
+    width: 600px;
+    top : 50% ;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
 .first {
-    color :rgb(207, 30, 113) ;
+    color :white;
+    font-size : 2em;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -188,7 +191,8 @@ header {
 }
 
 .second {
-    color : rgb(207, 30, 113);
+    color : white;
+    font-size : 2em;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -196,7 +200,8 @@ header {
 }
 
 .third {
-    color : rgb(207, 30, 113);
+    color : white;
+    font-size : 2em;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -437,8 +442,93 @@ button:hover {
     padding-top: 5%; 
   }
 
-  .homeToBuy { 
+.homeToBuy { 
     position: relative; 
     overflow: hidden; 
     padding-top: 5%; 
-  }
+}
+
+
+#formulaire{
+    background-color : pink ; 
+    padding : 10px 0px 100px 0px;
+    text-align : center ; 
+}
+
+.parleNousDeToi{
+    /* font-family: Playfair Display, serif ;  */
+    font-size: clamp(25px, 7vw, 70px);
+    font-weight : 100;
+}
+
+button{
+    font-size:1em ;
+    background-color: rgb(207, 30, 113) ; 
+}
+
+button:hover {
+    background-color : white ;
+    color :rgb(207, 30, 113);
+    cursor : pointer ;
+    transition : 0,3 s ease-in-out;
+}
+
+
+form{
+    margin: 0 auto ; 
+    max-width : 900px ; 
+}
+
+input, textarea, button{
+    border : none;
+    width : 55%;
+    padding : 15px 10px;
+    margin: 1px 0;
+    font-size : 1.2em;
+    font-family : 'Arial', sans-serif ;
+    border-radius: 8px ;
+}
+
+
+
+
+/* BUTTON SHARE LINKS STYLE.HTML */
+
+.copy-link {
+    height: 36px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 250px;
+    text-align : center;
+}
+
+.copy-link-input {
+    flex-grow: 1;
+    padding: 0 8px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-right: none;
+    outline: none;
+}
+
+.copy-link-input:hover {
+    background: #eeeeee;
+}
+
+.copy-link-button {
+    flex-shrink: 0;
+    width: var(--height);
+    height: var(--height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dddddd;
+    color: #333333;
+    outline: none;
+    border: 1px solid #cccccc;
+    cursor: pointer;
+} 
+.copy-link-button:hover {
+    background: #cccccc;
+}
